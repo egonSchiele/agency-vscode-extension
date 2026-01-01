@@ -3,6 +3,7 @@
   "displayName": "adl-lang",
   "description": "Language support for the ADL language",
   "version": "0.0.2",
+  "publisher": "adl",
   "engines": {
     "vscode": "^1.107.0"
   },
@@ -12,7 +13,7 @@
   ],
   "main": "./out/extension.js",
   "activationEvents": [
-    "onLanguage:adl"
+    "onStartupFinished"
   ],
   "contributes": {
     "languages": [{
