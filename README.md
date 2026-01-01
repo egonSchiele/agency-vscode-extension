@@ -1,6 +1,8 @@
 # adl-lang README
 
-This is the README for your extension "adl-lang". After writing up a brief description, we recommend including the following sections.
+Clone this into `~/.vscode/extensions`.
+
+Remember to run `pnpm run compile` to build the extension before using!
 
 ## Features
 
