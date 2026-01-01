@@ -359,6 +359,16 @@ export class ADLFormattingProvider implements vscode.DocumentFormattingEditProvi
       return false; // No space for function calls
     }
 
+    // Space before opening brace after closing paren (function definitions)
+    if (lastToken.type === TokenType.CLOSE_PAREN && token.type === TokenType.OPEN_BRACE) {
+      return true;
+    }
+
+    // Space before field comments
+    if (token.type === TokenType.FIELD_COMMENT) {
+      return true;
+    }
+
     return false;
   }
 
