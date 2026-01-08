@@ -16,28 +16,41 @@
     "onStartupFinished"
   ],
   "contributes": {
-    "languages": [{
-      "id": "agency",
-      "aliases": ["Agency", "agency"],
-      "extensions": [".agency"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "agency",
-      "scopeName": "source.agency",
-      "path": "./syntaxes/agency.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "agency",
+        "aliases": [
+          "Agency",
+          "agency"
+        ],
+        "extensions": [
+          ".agency"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "agency",
+        "scopeName": "source.agency",
+        "path": "./syntaxes/agency.tmLanguage.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile"
+    "pretest": "npm run compile",
+    "agency": "agency"
   },
   "devDependencies": {
     "@types/node": "^18.x",
     "@types/vscode": "^1.107.0",
     "@vscode/vsce": "^2.22.0",
     "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "agency-lang": "^0.0.6"
   }
 }

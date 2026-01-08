@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      agency-lang:
+        specifier: ^0.0.6
+        version: 0.0.6
     devDependencies:
       '@types/node':
         specifier: ^18.x
@@ -70,6 +74,9 @@ packages:
   '@types/node@18.19.130':
     resolution: {integrity: sha512-GRaXQx6jGfL8sKfaIDD6OupbIHBr9jv7Jnaml9tB7l4v068PAOXqfcujMMo5PhbIs6ggR1XODELqahT2R8v0fg==}
 
+  '@types/node@22.19.3':
+    resolution: {integrity: sha512-1N9SBnWYOJTrNZCdh/yJE+t910Y128BoyY+zBLWhL3r0TYzlTmFdXrPwHL9DyFZmlEXNQQolTZh3KHV31QDhyA==}
+
   '@types/vscode@1.107.0':
     resolution: {integrity: sha512-XS8YE1jlyTIowP64+HoN30OlC1H9xqSlq1eoLZUgFEC8oUTO6euYZxti1xRiLSfZocs4qytTzR6xCBYtioQTCg==}
 
@@ -128,6 +135,10 @@ packages:
   '@vscode/vsce@2.32.0':
     resolution: {integrity: sha512-3EFJfsgrSftIqt3EtdRcAygy/OJ3hstyI1cDmIgkU9CFZW5C+3djr6mfosndCUqcVYuyjmxOK1xmFp/Bq7+NIg==}
     engines: {node: '>= 16'}
+    hasBin: true
+
+  agency-lang@0.0.6:
+    resolution: {integrity: sha512-Exk5ZYsgcXkH2NjjYMB9mj5MfDfvWBFWVWzGl0+g6k+aZbhdMfxAjcpUlL9HUp765qrHE6bOlkPbxyXkCAYGAA==}
     hasBin: true
 
   agent-base@7.1.4:
@@ -211,6 +222,10 @@ packages:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
+  commander@14.0.2:
+    resolution: {integrity: sha512-TywoWNNRbhoD0BXs1P3ZEScW8W5iKrnbithIl0YH+uCmBd0QpPOA8yc82DS3BIE5Ma6FnBVUsJ7wVUDz4dvOWQ==}
+    engines: {node: '>=20'}
+
   commander@6.2.1:
     resolution: {integrity: sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==}
     engines: {node: '>= 6'}
@@ -281,6 +296,9 @@ packages:
 
   ecdsa-sig-formatter@1.0.11:
     resolution: {integrity: sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==}
+
+  egonlog@0.0.2:
+    resolution: {integrity: sha512-usjNRcD2lfps5GJVxa/VRS8W+zW3eYEgAxH2a6vE/k7Ab4jBlT5ZJ2u78oxXfM/4X7F+lWmEHZgwFIxOGAVJFw==}
 
   encoding-sniffer@0.2.1:
     resolution: {integrity: sha512-5gvq20T6vfpekVtqrYQsSCFZ1wEg5+wW0/QaZMWkFr6BqD3NfKs0rLCx4rrVlSWJeZb5NBJgVLswK/w2MWU+Gw==}
@@ -511,6 +529,11 @@ packages:
   mute-stream@0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
 
+  nanoid@5.1.6:
+    resolution: {integrity: sha512-c7+7RQ+dMB5dPwwCp4ee1/iV/q2P6aK1mTZcfr1BTuVlyW9hJYiMPybJCcnBlQtuSmTIWNeazm/zqNoZSSElBg==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+
   napi-build-utils@2.0.0:
     resolution: {integrity: sha512-GEbrYkbfF7MoNaoh2iGG84Mnf/WZfB0GdGEsM8wz7Expx/LlWf5U8t9nvJKXSp3qr5IsEbK04cBGhol/KwOsWA==}
 
@@ -534,6 +557,18 @@ packages:
   open@10.2.0:
     resolution: {integrity: sha512-YgBpdJHPyQ2UE5x+hlSXcnejzAvD0b22U2OuAP+8OnlJT+PjWPxtgmGqKKc+RgTM63U9gN0YzrYc71R2WT/hTA==}
     engines: {node: '>=18'}
+
+  openai@6.15.0:
+    resolution: {integrity: sha512-F1Lvs5BoVvmZtzkUEVyh8mDQPPFolq4F+xdsx/DO8Hee8YF3IGAlZqUIsF+DVGhqf4aU0a3bTghsxB6OIsRy1g==}
+    hasBin: true
+    peerDependencies:
+      ws: ^8.18.0
+      zod: ^3.25 || ^4.0
+    peerDependenciesMeta:
+      ws:
+        optional: true
+      zod:
+        optional: true
 
   parse-semver@1.1.1:
     resolution: {integrity: sha512-Eg1OuNntBMH0ojvEKSrvDSnwLmvVuUOSdylH/pSCPNMIspLlweJyIWXCE+k/5hm3cj/EBUYwmWkjhBALNP4LXQ==}
@@ -622,6 +657,17 @@ packages:
   simple-get@4.0.1:
     resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
 
+  simplemachine@https://codeload.github.com/egonSchiele/simplemachine/tar.gz/eefa7c0c92c0bc22609b37b426435795eaf53cde:
+    resolution: {tarball: https://codeload.github.com/egonSchiele/simplemachine/tar.gz/eefa7c0c92c0bc22609b37b426435795eaf53cde}
+    version: 0.0.28
+
+  statelog-client@0.0.28:
+    resolution: {integrity: sha512-MtPzG2tKWC0bE2sWFJ70a29joY7ffJf4840M89Wj6nPopF/TiZS8aOXhNIUBzqcRSMghWauVi/YkjxTKPf0AEA==}
+
+  statelog-client@https://codeload.github.com/egonSchiele/statelog-client/tar.gz/b9b79118969d184cfc78e0bc1eecb97bfd86d17c:
+    resolution: {tarball: https://codeload.github.com/egonSchiele/statelog-client/tar.gz/b9b79118969d184cfc78e0bc1eecb97bfd86d17c}
+    version: 0.0.28
+
   string_decoder@1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
 
@@ -639,6 +685,16 @@ packages:
   tar-stream@2.2.0:
     resolution: {integrity: sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==}
     engines: {node: '>=6'}
+
+  tarsec@0.0.18:
+    resolution: {integrity: sha512-g1OZ7VyyaIjHT1KXI6o8tdebJT1WrC3801+RGw2mEEWc6S2gVC5aBDUZZRbxeUPkekMR5R/+ba6s8UfsJv8n8w==}
+
+  tarsec@0.1.1:
+    resolution: {integrity: sha512-Mi29JH15nShnwNq7sA1alHB2Z8FO17uedfTCACFUW7qCNau6RkD7u1FXK+Z8XXcXB/aC/EqTll5ntPfAcYW5JQ==}
+
+  termcolors@https://codeload.github.com/egonSchiele/termcolors/tar.gz/d5c1f497618398ce1440d2383d2aad2642e4051f:
+    resolution: {tarball: https://codeload.github.com/egonSchiele/termcolors/tar.gz/d5c1f497618398ce1440d2383d2aad2642e4051f}
+    version: 0.0.20
 
   tmp@0.2.5:
     resolution: {integrity: sha512-voyz6MApa1rQGUxT3E+BK7/ROe8itEx7vD8/HEvt4xwXucvQ5G5oeEiHkmHZJuBO21RpOf+YYm9MOivj709jow==}
@@ -662,6 +718,10 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  typestache@0.4.4:
+    resolution: {integrity: sha512-KBovlinBx3jy9Vbh/slgZ3vaX12LLNcpLtHreMe1SLKHiJqBV1LPSpEE6tcyAWFtYGGCmklWwtpbq+P5DFRoaA==}
+    hasBin: true
+
   uc.micro@1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
 
@@ -670,6 +730,9 @@ packages:
 
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   undici@7.16.0:
     resolution: {integrity: sha512-QEg3HPMll0o3t2ourKwOeUAZ159Kn9mx5pnzHRQO8+Wixmh88YdZRiIwat0iNzNNXn0yoEtXJqFpyW7eM8BV7g==}
@@ -717,6 +780,9 @@ packages:
 
   yazl@2.5.1:
     resolution: {integrity: sha512-phENi2PLiHnHb6QBVot+dJnaAZ0xosj7p3fWl+znIjBDlnMI2PsZCJZ306BPTFOaHf5qdDEI8x5qFrSOBN5vrw==}
+
+  zod@4.3.5:
+    resolution: {integrity: sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g==}
 
 snapshots:
 
@@ -807,6 +873,10 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
+  '@types/node@22.19.3':
+    dependencies:
+      undici-types: 6.21.0
+
   '@types/vscode@1.107.0': {}
 
   '@typespec/ts-http-runtime@0.3.2':
@@ -886,6 +956,19 @@ snapshots:
       keytar: 7.9.0
     transitivePeerDependencies:
       - supports-color
+
+  agency-lang@0.0.6:
+    dependencies:
+      egonlog: 0.0.2
+      nanoid: 5.1.6
+      openai: 6.15.0(zod@4.3.5)
+      simplemachine: https://codeload.github.com/egonSchiele/simplemachine/tar.gz/eefa7c0c92c0bc22609b37b426435795eaf53cde
+      statelog-client: 0.0.28
+      tarsec: 0.1.1
+      typestache: 0.4.4
+      zod: 4.3.5
+    transitivePeerDependencies:
+      - ws
 
   agent-base@7.1.4: {}
 
@@ -989,6 +1072,8 @@ snapshots:
     dependencies:
       delayed-stream: 1.0.0
 
+  commander@14.0.2: {}
+
   commander@6.2.1: {}
 
   concat-map@0.0.1: {}
@@ -1056,6 +1141,10 @@ snapshots:
   ecdsa-sig-formatter@1.0.11:
     dependencies:
       safe-buffer: 5.2.1
+
+  egonlog@0.0.2:
+    dependencies:
+      termcolors: https://codeload.github.com/egonSchiele/termcolors/tar.gz/d5c1f497618398ce1440d2383d2aad2642e4051f
 
   encoding-sniffer@0.2.1:
     dependencies:
@@ -1301,6 +1390,8 @@ snapshots:
 
   mute-stream@0.0.8: {}
 
+  nanoid@5.1.6: {}
+
   napi-build-utils@2.0.0:
     optional: true
 
@@ -1328,6 +1419,10 @@ snapshots:
       define-lazy-prop: 3.0.0
       is-inside-container: 1.0.0
       wsl-utils: 0.1.0
+
+  openai@6.15.0(zod@4.3.5):
+    optionalDependencies:
+      zod: 4.3.5
 
   parse-semver@1.1.1:
     dependencies:
@@ -1445,6 +1540,20 @@ snapshots:
       simple-concat: 1.0.1
     optional: true
 
+  simplemachine@https://codeload.github.com/egonSchiele/simplemachine/tar.gz/eefa7c0c92c0bc22609b37b426435795eaf53cde:
+    dependencies:
+      nanoid: 5.1.6
+      statelog-client: https://codeload.github.com/egonSchiele/statelog-client/tar.gz/b9b79118969d184cfc78e0bc1eecb97bfd86d17c
+      termcolors: https://codeload.github.com/egonSchiele/termcolors/tar.gz/d5c1f497618398ce1440d2383d2aad2642e4051f
+
+  statelog-client@0.0.28:
+    dependencies:
+      nanoid: 5.1.6
+
+  statelog-client@https://codeload.github.com/egonSchiele/statelog-client/tar.gz/b9b79118969d184cfc78e0bc1eecb97bfd86d17c:
+    dependencies:
+      nanoid: 5.1.6
+
   string_decoder@1.3.0:
     dependencies:
       safe-buffer: 5.2.1
@@ -1474,6 +1583,12 @@ snapshots:
       readable-stream: 3.6.2
     optional: true
 
+  tarsec@0.0.18: {}
+
+  tarsec@0.1.1: {}
+
+  termcolors@https://codeload.github.com/egonSchiele/termcolors/tar.gz/d5c1f497618398ce1440d2383d2aad2642e4051f: {}
+
   tmp@0.2.5: {}
 
   tslib@2.8.1: {}
@@ -1493,11 +1608,20 @@ snapshots:
 
   typescript@5.9.3: {}
 
+  typestache@0.4.4:
+    dependencies:
+      '@types/node': 22.19.3
+      commander: 14.0.2
+      tarsec: 0.0.18
+      typescript: 5.9.3
+
   uc.micro@1.0.6: {}
 
   underscore@1.13.7: {}
 
   undici-types@5.26.5: {}
+
+  undici-types@6.21.0: {}
 
   undici@7.16.0: {}
 
@@ -1537,3 +1661,5 @@ snapshots:
   yazl@2.5.1:
     dependencies:
       buffer-crc32: 0.2.13
+
+  zod@4.3.5: {}

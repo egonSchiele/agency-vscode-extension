@@ -4,7 +4,7 @@ category :: "import_recipe" | "create_ingredient"
 category = `determine if the user wants to import a recipe from a website or create a new ingredient based on this message: ${msg}`
 
 type Url = {
-    url: string # website url,
+url: string # website url,
 }
 
 def importRecipe() {
