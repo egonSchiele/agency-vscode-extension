@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       agency-lang:
-        specifier: ^0.0.6
-        version: 0.0.6
+        specifier: ^0.0.7
+        version: 0.0.7
     devDependencies:
       '@types/node':
         specifier: ^18.x
@@ -137,8 +137,8 @@ packages:
     engines: {node: '>= 16'}
     hasBin: true
 
-  agency-lang@0.0.6:
-    resolution: {integrity: sha512-Exk5ZYsgcXkH2NjjYMB9mj5MfDfvWBFWVWzGl0+g6k+aZbhdMfxAjcpUlL9HUp765qrHE6bOlkPbxyXkCAYGAA==}
+  agency-lang@0.0.7:
+    resolution: {integrity: sha512-4O+tFF4J63B18nvsgW+Rca7AcuuLzfPq2j0SsC2sW9x+oqo7iaOXDE/23EE1QW1EeIlwSQZpMv+5vukvBdOCfA==}
     hasBin: true
 
   agent-base@7.1.4:
@@ -957,7 +957,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  agency-lang@0.0.6:
+  agency-lang@0.0.7:
     dependencies:
       egonlog: 0.0.2
       nanoid: 5.1.6

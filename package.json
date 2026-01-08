@@ -38,8 +38,8 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile",
     "agency": "agency"
@@ -51,6 +51,6 @@
     "typescript": "^5.3.0"
   },
   "dependencies": {
-    "agency-lang": "^0.0.6"
+    "agency-lang": "^0.0.7"
   }
 }
