@@ -1,13 +1,13 @@
 import * as vscode from "vscode";
-import { ADLFormattingProvider } from "./formatter";
+import { AgencyFormattingProvider } from "./formatter";
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log("ADL extension is now active");
+  console.log("Agency extension is now active");
 
-  /*   // Register the document formatting provider for ADL files
+  /*   // Register the document formatting provider for Agency files
   const formatterProvider = vscode.languages.registerDocumentFormattingEditProvider(
-    { scheme: 'file', language: 'adl' },
-    new ADLFormattingProvider()
+    { scheme: 'file', language: 'agency' },
+    new AgencyFormattingProvider()
   );
 
   context.subscriptions.push(formatterProvider);

@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "ADL",
+  "name": "Agency",
   "patterns": [
     {
       "include": "#comments"
@@ -37,7 +37,7 @@
     "comments": {
       "patterns": [
         {
-          "name": "comment.line.double-slash.adl",
+          "name": "comment.line.double-slash.agency",
           "match": "//.*$"
         }
       ]
@@ -45,19 +45,19 @@
     "keywords": {
       "patterns": [
         {
-          "name": "keyword.control.adl",
+          "name": "keyword.control.agency",
           "match": "\\b(if|while|for|match|return)\\b"
         },
         {
-          "name": "storage.type.adl",
+          "name": "storage.type.agency",
           "match": "\\b(def|type)\\b"
         },
         {
-          "name": "support.function.builtin.adl",
+          "name": "support.function.builtin.agency",
           "match": "\\b(input|read|write|fetch|fetchJSON|fetchJson|print)\\b"
         },
         {
-          "name": "support.type.builtin.adl",
+          "name": "support.type.builtin.agency",
           "match": "\\b(string|number|boolean)\\b"
         }
       ]
@@ -65,51 +65,51 @@
     "operators": {
       "patterns": [
         {
-          "name": "keyword.operator.type.annotation.adl",
+          "name": "keyword.operator.type.annotation.agency",
           "match": "::"
         },
         {
-          "name": "keyword.operator.arrow.adl",
+          "name": "keyword.operator.arrow.agency",
           "match": "=>"
         },
         {
-          "name": "keyword.operator.type.union.adl",
+          "name": "keyword.operator.type.union.agency",
           "match": "\\|"
         },
         {
-          "name": "keyword.operator.assignment.adl",
+          "name": "keyword.operator.assignment.agency",
           "match": "="
         }
       ]
     },
     "strings": {
-      "name": "string.quoted.double.adl",
+      "name": "string.quoted.double.agency",
       "begin": "\"",
       "end": "\"",
       "patterns": [
         {
-          "name": "constant.character.escape.adl",
+          "name": "constant.character.escape.agency",
           "match": "\\\\."
         }
       ]
     },
     "backtick-strings": {
-      "name": "string.template.adl",
+      "name": "string.template.agency",
       "begin": "`",
       "end": "`",
       "patterns": [
         {
-          "name": "meta.template.expression.adl",
+          "name": "meta.template.expression.agency",
           "begin": "\\$\\{",
           "end": "\\}",
           "beginCaptures": {
             "0": {
-              "name": "punctuation.definition.template-expression.begin.adl"
+              "name": "punctuation.definition.template-expression.begin.agency"
             }
           },
           "endCaptures": {
             "0": {
-              "name": "punctuation.definition.template-expression.end.adl"
+              "name": "punctuation.definition.template-expression.end.agency"
             }
           },
           "patterns": [
@@ -119,7 +119,7 @@
           ]
         },
         {
-          "name": "constant.character.escape.adl",
+          "name": "constant.character.escape.agency",
           "match": "\\\\."
         }
       ]
@@ -150,14 +150,14 @@
       ]
     },
     "function-definition": {
-      "name": "meta.function.adl",
+      "name": "meta.function.agency",
       "begin": "\\b(def)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\(",
       "beginCaptures": {
         "1": {
-          "name": "storage.type.function.adl"
+          "name": "storage.type.function.agency"
         },
         "2": {
-          "name": "entity.name.function.adl"
+          "name": "entity.name.function.agency"
         }
       },
       "end": "\\)",
@@ -168,17 +168,17 @@
       ]
     },
     "type-definition": {
-      "name": "meta.type.definition.adl",
+      "name": "meta.type.definition.agency",
       "begin": "\\b(type)\\s+([A-Z][a-zA-Z0-9_]*)\\s*(=)",
       "beginCaptures": {
         "1": {
-          "name": "storage.type.adl"
+          "name": "storage.type.agency"
         },
         "2": {
-          "name": "entity.name.type.adl"
+          "name": "entity.name.type.agency"
         },
         "3": {
-          "name": "keyword.operator.assignment.adl"
+          "name": "keyword.operator.assignment.agency"
         }
       },
       "end": "(?<=})|(?=;)|$",
@@ -197,26 +197,26 @@
     "type-body": {
       "patterns": [
         {
-          "name": "meta.type.record.adl",
+          "name": "meta.type.record.agency",
           "begin": "\\{",
           "end": "\\}",
           "patterns": [
             {
-              "name": "comment.line.hash.adl",
+              "name": "comment.line.hash.agency",
               "match": "#.*$"
             },
             {
-              "name": "meta.field.adl",
+              "name": "meta.field.agency",
               "match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*(:)\\s*([a-zA-Z_][a-zA-Z0-9_]*)",
               "captures": {
                 "1": {
-                  "name": "variable.other.property.adl"
+                  "name": "variable.other.property.agency"
                 },
                 "2": {
-                  "name": "punctuation.separator.colon.adl"
+                  "name": "punctuation.separator.colon.agency"
                 },
                 "3": {
-                  "name": "entity.name.type.adl"
+                  "name": "entity.name.type.agency"
                 }
               }
             }
@@ -225,36 +225,36 @@
       ]
     },
     "function-call": {
-      "name": "meta.function-call.adl",
+      "name": "meta.function-call.agency",
       "match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*(\\()",
       "captures": {
         "1": {
-          "name": "entity.name.function.adl"
+          "name": "entity.name.function.agency"
         },
         "2": {
-          "name": "punctuation.definition.parameters.begin.adl"
+          "name": "punctuation.definition.parameters.begin.agency"
         }
       }
     },
     "member-access": {
-      "name": "meta.member.access.adl",
+      "name": "meta.member.access.agency",
       "match": "([a-zA-Z_][a-zA-Z0-9_]*)(\\.)([a-zA-Z_][a-zA-Z0-9_]*)",
       "captures": {
         "1": {
-          "name": "variable.other.object.adl"
+          "name": "variable.other.object.agency"
         },
         "2": {
-          "name": "punctuation.accessor.adl"
+          "name": "punctuation.accessor.agency"
         },
         "3": {
-          "name": "variable.other.property.adl"
+          "name": "variable.other.property.agency"
         }
       }
     },
     "variables": {
-      "name": "variable.other.readwrite.adl",
+      "name": "variable.other.readwrite.agency",
       "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
     }
   },
-  "scopeName": "source.adl"
+  "scopeName": "source.agency"
 }

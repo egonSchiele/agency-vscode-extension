@@ -1,4 +1,4 @@
-# adl-lang README
+# agency-lang README
 
 Clone this into `~/.vscode/extensions`.
 

@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { Token, TokenType, FormatterOptions } from './types';
 
-export class ADLFormattingProvider implements vscode.DocumentFormattingEditProvider {
+export class AgencyFormattingProvider implements vscode.DocumentFormattingEditProvider {
 
   provideDocumentFormattingEdits(
     document: vscode.TextDocument,
@@ -25,7 +25,7 @@ export class ADLFormattingProvider implements vscode.DocumentFormattingEditProvi
       const tokens = this.tokenize(text);
       return this.formatTokens(tokens);
     } catch (error) {
-      console.error('ADL formatting error:', error);
+      console.error('Agency formatting error:', error);
       return text; // Return original text on error
     }
   }

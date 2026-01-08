@@ -1,9 +1,9 @@
 {
-  "name": "adl-lang",
-  "displayName": "adl-lang",
-  "description": "Language support for the ADL language",
+  "name": "agency-lang",
+  "displayName": "agency-lang",
+  "description": "Language support for the Agency language",
   "version": "0.0.2",
-  "publisher": "adl",
+  "publisher": "agency",
   "engines": {
     "vscode": "^1.107.0"
   },
@@ -17,15 +17,15 @@
   ],
   "contributes": {
     "languages": [{
-      "id": "adl",
-      "aliases": ["ADL", "adl"],
-      "extensions": [".adl"],
+      "id": "agency",
+      "aliases": ["Agency", "agency"],
+      "extensions": [".agency"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
-      "language": "adl",
-      "scopeName": "source.adl",
-      "path": "./syntaxes/adl.tmLanguage.json"
+      "language": "agency",
+      "scopeName": "source.agency",
+      "path": "./syntaxes/agency.tmLanguage.json"
     }]
   },
   "scripts": {
