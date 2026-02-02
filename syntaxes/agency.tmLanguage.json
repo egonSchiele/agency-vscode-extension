@@ -58,7 +58,7 @@
         },
         {
           "name": "support.type.builtin.agency",
-          "match": "\\b(string|number|boolean|null|undefined)\\b"
+          "match": "\\b(string|number|boolean|null|undefined|void|any)\\b"
         }
       ]
     },
@@ -87,6 +87,26 @@
       "begin": "\"",
       "end": "\"",
       "patterns": [
+        {
+          "name": "meta.template.expression.agency",
+          "begin": "\\$\\{",
+          "end": "\\}",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.template-expression.begin.agency"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.template-expression.end.agency"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#expression"
+            }
+          ]
+        },
         {
           "name": "constant.character.escape.agency",
           "match": "\\\\."
