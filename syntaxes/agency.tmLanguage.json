@@ -46,7 +46,7 @@
       "patterns": [
         {
           "name": "keyword.control.agency",
-          "match": "\\b(if|while|for|match|return|async|await|stream|streaming|throws|try|catch|else)\\b"
+          "match": "\\b(if|while|for|match|return|async|await|stream|streaming|throws|try|catch|else|uses)\\b"
         },
         {
           "name": "storage.type.agency",
@@ -58,7 +58,7 @@
         },
         {
           "name": "support.type.builtin.agency",
-          "match": "\\b(string|number|boolean|null|undefined|void|any|@messages|@model)\\b"
+          "match": "\\b(string|number|boolean|null|undefined|void|any)\\b"
         }
       ]
     },
@@ -79,6 +79,10 @@
         {
           "name": "keyword.operator.assignment.agency",
           "match": "="
+        },
+        {
+          "name": "keyword.operator.concatenation.agency",
+          "match": "+"
         }
       ]
     },
