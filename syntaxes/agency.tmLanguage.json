@@ -54,7 +54,7 @@
         },
         {
           "name": "support.function.builtin.agency",
-          "match": "\\b(input|read|write|fetch|fetchJSON|fetchJson|print|llm|interrupt)\\b"
+          "match": "\\b(input|read|write|fetch|fetchJSON|fetchJson|print|llm|interrupt|time|printTime)\\b"
         },
         {
           "name": "support.type.builtin.agency",
