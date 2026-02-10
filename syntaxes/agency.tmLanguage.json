@@ -79,10 +79,6 @@
         {
           "name": "keyword.operator.assignment.agency",
           "match": "="
-        },
-        {
-          "name": "keyword.operator.concatenation.agency",
-          "match": "+"
         }
       ]
     },
