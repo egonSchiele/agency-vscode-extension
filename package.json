@@ -51,6 +51,6 @@
     "typescript": "^5.3.0"
   },
   "dependencies": {
-    "agency-lang": "^0.0.22"
+    "agency-lang": "^0.0.54"
   }
 }

@@ -1,27 +1,28 @@
-msg = input("> ");
+import node;
+msg = input("> ")
 
 category :: "import_recipe" | "create_ingredient"
-category = `determine if the user wants to import a recipe from a website or create a new ingredient based on this message: ${msg}`
+category = llm("determine if the user wants to import a recipe from a website or create a new ingredient based on this message: ${msg}")
 
 type Url = {
-url: string # website url,
+  url: string # website url
 }
 
 def importRecipe() {
-url :: Url
-url = `extract the url from this message: ${msg}`
+  url :: Url
+  url = llm("extract the url from this message: ${msg}")
 
-html :: string
-html = fetch(url.url)
+  html :: string
+  html = fetch(url.url)
 
-recipe :: string
-recipe = `extract the recipe from this html: ${html}`
+  recipe :: string
+  recipe = llm("extract the recipe from this html: ${html}")
 
-print(recipe);
+  print(recipe)
 }
 
 def createIngredient() {
-    print("tbd")
+  print("tbd")
 }
 
 match(category) {

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       agency-lang:
-        specifier: ^0.0.22
-        version: 0.0.22(ws@8.19.0)
+        specifier: ^0.0.54
+        version: 0.0.54(ws@8.19.0)
     devDependencies:
       '@types/node':
         specifier: ^18.x
@@ -71,8 +71,15 @@ packages:
     resolution: {integrity: sha512-lvuAwsDpPDE/jSuVQOBMpLbXuVuLsPNRwWCyK3/6bPlBk0fGWegqoZ0qjZclMWyQ2JNvIY3vHY7hoFmFmFQcOw==}
     engines: {node: '>=16'}
 
-  '@google/genai@1.39.0':
-    resolution: {integrity: sha512-Vz7AQsOdBeiIcxmXIQNy/hzDvyAOE1lSpWA10itUQza7h3aQFF6QSGaQ7o1GYsjMD3XslK4Ee/Ol0eLhRXb7gA==}
+  '@dagrejs/dagre@1.1.8':
+    resolution: {integrity: sha512-5SEDlndt4W/LaVzPYJW+bSmSEZc9EzTf8rJ20WCKvjS5EAZAN0b+x0Yww7VMT4R3Wootkg+X9bUfUxazYw6Blw==}
+
+  '@dagrejs/graphlib@2.2.4':
+    resolution: {integrity: sha512-mepCf/e9+SKYy1d02/UkvSy6+6MoyXhVxP8lLDfA7BPE1X1d4dR0sZznmbM8/XVJ1GPM+Svnx7Xj6ZweByWUkw==}
+    engines: {node: '>17.0.0'}
+
+  '@google/genai@1.41.0':
+    resolution: {integrity: sha512-S4WGil+PG0NBQRAx+0yrQuM/TWOLn2gGEy5wn4IsoOI6ouHad0P61p3OWdhJ3aqr9kfj8o904i/jevfaGoGuIQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@modelcontextprotocol/sdk': ^1.25.2
@@ -121,8 +128,8 @@ packages:
   '@types/node@18.19.130':
     resolution: {integrity: sha512-GRaXQx6jGfL8sKfaIDD6OupbIHBr9jv7Jnaml9tB7l4v068PAOXqfcujMMo5PhbIs6ggR1XODELqahT2R8v0fg==}
 
-  '@types/node@22.19.7':
-    resolution: {integrity: sha512-MciR4AKGHWl7xwxkBa6xUGxQJ4VBOmPTF7sL+iGzuahOFaO0jHCsuEfS80pan1ef4gWId1oWOweIhrDEYLuaOw==}
+  '@types/node@22.19.11':
+    resolution: {integrity: sha512-BH7YwL6rA93ReqeQS1c4bsPpcfOmJasG+Fkr6Y59q83f9M1WcBRHR2vM+P9eOisYRcN3ujQoiZY8uk5W+1WL8w==}
 
   '@types/vscode@1.107.0':
     resolution: {integrity: sha512-XS8YE1jlyTIowP64+HoN30OlC1H9xqSlq1eoLZUgFEC8oUTO6euYZxti1xRiLSfZocs4qytTzR6xCBYtioQTCg==}
@@ -184,8 +191,8 @@ packages:
     engines: {node: '>= 16'}
     hasBin: true
 
-  agency-lang@0.0.22:
-    resolution: {integrity: sha512-AWBke50vi4tm26at1iEw9dzqMDiuYHgQZ/4x2ZWVck572OVLt++YBPlUljstWaw0KZvdCfSyJIA7kOqCf63XmQ==}
+  agency-lang@0.0.54:
+    resolution: {integrity: sha512-6cYrXDf6IKqLJzgDzVjz5LSpCN2/HYkljlrWKM/Sb5TM7diBAQTj8aS0yyuc9Tm3glvqCGZJr0CyWr3qx8pwGw==}
     hasBin: true
 
   agent-base@7.1.4:
@@ -226,6 +233,9 @@ packages:
 
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+
+  beautiful-mermaid@0.1.3:
+    resolution: {integrity: sha512-lVEHCnlVLtVRbO03T+D9kY5BZlkpvFU6F18LEu2N2VLB0eo5evG1FJWg3SvREErKY+zZ7j9f+cNsgtiOhYI2Nw==}
 
   bignumber.js@9.3.1:
     resolution: {integrity: sha512-Ko0uX15oIUS7wJ3Rb30Fs6SkVbLmPBAKdlm7q9+ak9bbIeFf0MwuBsQV6z7+X768/cHsfg+WlysDWJcmthjsjQ==}
@@ -486,6 +496,7 @@ packages:
 
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@7.2.3:
@@ -570,6 +581,10 @@ packages:
     engines: {node: '>=14.16'}
     hasBin: true
 
+  is-network-error@1.3.0:
+    resolution: {integrity: sha512-6oIwpsgRfnDiyEDLMay/GqCl3HoAtH5+RUKW29gYkL0QA+ipzpDLA16yQs7/RHCSu+BwgbJaOUqa4A99qNVQVw==}
+    engines: {node: '>=16'}
+
   is-wsl@3.1.0:
     resolution: {integrity: sha512-UcVfVfaK4Sc4m7X3dUSoHoozQGBEFeDC+zVo06t98xe8CzHSZZBekNXH+tu0NalHolcJ/QAGqS46Hef7QXBIMw==}
     engines: {node: '>=16'}
@@ -598,6 +613,10 @@ packages:
 
   keytar@7.9.0:
     resolution: {integrity: sha512-VPD8mtVtm5JNtA2AErl6Chp06JBfy7diFQ7TQQhdpWOl6MrCRB+eRbvAZUsbGQS9kiMq0coJsy0W0vHpDCkWsQ==}
+
+  kleur@3.0.3:
+    resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
+    engines: {node: '>=6'}
 
   leven@3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
@@ -688,6 +707,11 @@ packages:
   mute-stream@0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
 
+  nanoid@5.1.6:
+    resolution: {integrity: sha512-c7+7RQ+dMB5dPwwCp4ee1/iV/q2P6aK1mTZcfr1BTuVlyW9hJYiMPybJCcnBlQtuSmTIWNeazm/zqNoZSSElBg==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+
   napi-build-utils@2.0.0:
     resolution: {integrity: sha512-GEbrYkbfF7MoNaoh2iGG84Mnf/WZfB0GdGEsM8wz7Expx/LlWf5U8t9nvJKXSp3qr5IsEbK04cBGhol/KwOsWA==}
 
@@ -724,8 +748,8 @@ packages:
     resolution: {integrity: sha512-YgBpdJHPyQ2UE5x+hlSXcnejzAvD0b22U2OuAP+8OnlJT+PjWPxtgmGqKKc+RgTM63U9gN0YzrYc71R2WT/hTA==}
     engines: {node: '>=18'}
 
-  openai@6.17.0:
-    resolution: {integrity: sha512-NHRpPEUPzAvFOAFs9+9pC6+HCw/iWsYsKCMPXH5Kw7BpMxqd8g/A07/1o7Gx2TWtCnzevVRyKMRFqyiHyAlqcA==}
+  openai@6.22.0:
+    resolution: {integrity: sha512-7Yvy17F33Bi9RutWbsaYt5hJEEJ/krRPOrwan+f9aCPuMat1WVsb2VNSII5W1EksKT6fF69TG/xj4XzodK3JZw==}
     hasBin: true
     peerDependencies:
       ws: ^8.18.0
@@ -735,6 +759,10 @@ packages:
         optional: true
       zod:
         optional: true
+
+  p-retry@7.1.1:
+    resolution: {integrity: sha512-J5ApzjyRkkf601HpEeykoiCvzHQjWxPAHhyjFcEUP2SWq0+35NKh8TLhpLw+Dkq5TZBFvUM6UigdE9hIVYTl5w==}
+    engines: {node: '>=20'}
 
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
@@ -766,10 +794,17 @@ packages:
   pend@1.2.0:
     resolution: {integrity: sha512-F3asv42UuXchdzt+xXqfW1OGlVBe+mxa2mqI0pg5yAHZPvFmY3Y6drSf/GQ1A86WgWEN9Kzh/WrgKa6iGcHXLg==}
 
+  piemachine@0.0.8:
+    resolution: {integrity: sha512-uB5NkjavJ67vwxDebahXeSErfGLCFOd2pNmCEtCbehRiPKKtxGJqFQ/AEBprQ/HbMwK5QZhGQVzTivsSQ40nWg==}
+
   prebuild-install@7.1.3:
     resolution: {integrity: sha512-8Mf2cbV7x1cXPUILADGI3wuhfqWvtiLA1iclTDbFRZkgRQS0NqsPZphna9V+HyTEadheuPmjaJMsbzKQFOzLug==}
     engines: {node: '>=10'}
     hasBin: true
+
+  prompts@2.4.2:
+    resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
+    engines: {node: '>= 6'}
 
   protobufjs@7.5.4:
     resolution: {integrity: sha512-CvexbZtbov6jW2eXAvLukXjXUW1TzFaivC46BpWc/3BpcCysb5Vffu+B3XHMm8lVEuy2Mm4XGex8hBSg1yapPg==}
@@ -854,8 +889,17 @@ packages:
   simple-get@4.0.1:
     resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
 
-  smoltalk@0.0.11:
-    resolution: {integrity: sha512-wnE4BMJHu152ii3MEzYSgXHawp8rtx7dGtCSapI9flZM3gdj+WApaMsu3AN4pq3zchy+tEVfbrAnYVuP4ox9VA==}
+  sisteransi@1.0.5:
+    resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
+
+  smoltalk@0.0.18:
+    resolution: {integrity: sha512-kJVfbXpzgPXlE+Tziq6SbYLnxUxX51B+IbUG7iV3wo8ys9fRzQHX+tBtjJVgcDOPRj6XMmWEflImiQwn6iwPQA==}
+
+  statelog-client@0.0.35:
+    resolution: {integrity: sha512-oumIKJZxj1AzPSBtUrLn6Fu4ditAbSFozKbQr7IspY5nW1//vmBn8aOqqjEM2D8W4DlbAFxR04Tec0kKm2Ajpg==}
+
+  statelog-client@0.0.36:
+    resolution: {integrity: sha512-urcJ11W0zje+y8HA6xJbFjgHkzAFDO4fr4DUAO+lno4oBnFs5pQI0jSIuYaekIhgztQ7x3lBD7ZTeRDpPc5L7w==}
 
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
@@ -894,8 +938,8 @@ packages:
   tarsec@0.0.18:
     resolution: {integrity: sha512-g1OZ7VyyaIjHT1KXI6o8tdebJT1WrC3801+RGw2mEEWc6S2gVC5aBDUZZRbxeUPkekMR5R/+ba6s8UfsJv8n8w==}
 
-  tarsec@0.1.1:
-    resolution: {integrity: sha512-Mi29JH15nShnwNq7sA1alHB2Z8FO17uedfTCACFUW7qCNau6RkD7u1FXK+Z8XXcXB/aC/EqTll5ntPfAcYW5JQ==}
+  tarsec@0.1.5:
+    resolution: {integrity: sha512-9srSgnBGjwDDxrBExY3/fuQvNWj4ud+tSnqjGK5p5ZkLAUjySrkENJD57MhuexGnXoGEqhl72emKw+MF1xOTkg==}
 
   termcolors@https://codeload.github.com/egonSchiele/termcolors/tar.gz/d5c1f497618398ce1440d2383d2aad2642e4051f:
     resolution: {tarball: https://codeload.github.com/egonSchiele/termcolors/tar.gz/d5c1f497618398ce1440d2383d2aad2642e4051f}
@@ -1106,9 +1150,16 @@ snapshots:
       jsonwebtoken: 9.0.3
       uuid: 8.3.2
 
-  '@google/genai@1.39.0':
+  '@dagrejs/dagre@1.1.8':
+    dependencies:
+      '@dagrejs/graphlib': 2.2.4
+
+  '@dagrejs/graphlib@2.2.4': {}
+
+  '@google/genai@1.41.0':
     dependencies:
       google-auth-library: 10.5.0
+      p-retry: 7.1.1
       protobufjs: 7.5.4
       ws: 8.19.0
     transitivePeerDependencies:
@@ -1155,7 +1206,7 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@22.19.7':
+  '@types/node@22.19.11':
     dependencies:
       undici-types: 6.21.0
 
@@ -1239,11 +1290,16 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  agency-lang@0.0.22(ws@8.19.0):
+  agency-lang@0.0.54(ws@8.19.0):
     dependencies:
+      beautiful-mermaid: 0.1.3
+      commander: 14.0.3
       egonlog: 0.0.2
-      smoltalk: 0.0.11(ws@8.19.0)(zod@4.3.6)
-      tarsec: 0.1.1
+      piemachine: 0.0.8
+      prompts: 2.4.2
+      smoltalk: 0.0.18(ws@8.19.0)(zod@4.3.6)
+      statelog-client: 0.0.36
+      tarsec: 0.1.5
       typestache: 0.4.4
       zod: 4.3.6
     transitivePeerDependencies:
@@ -1281,6 +1337,10 @@ snapshots:
   balanced-match@1.0.2: {}
 
   base64-js@1.5.1: {}
+
+  beautiful-mermaid@0.1.3:
+    dependencies:
+      '@dagrejs/dagre': 1.1.8
 
   bignumber.js@9.3.1: {}
 
@@ -1676,6 +1736,8 @@ snapshots:
     dependencies:
       is-docker: 3.0.0
 
+  is-network-error@1.3.0: {}
+
   is-wsl@3.1.0:
     dependencies:
       is-inside-container: 1.0.0
@@ -1723,6 +1785,8 @@ snapshots:
       node-addon-api: 4.3.0
       prebuild-install: 7.1.3
     optional: true
+
+  kleur@3.0.3: {}
 
   leven@3.1.0: {}
 
@@ -1795,6 +1859,8 @@ snapshots:
 
   mute-stream@0.0.8: {}
 
+  nanoid@5.1.6: {}
+
   napi-build-utils@2.0.0:
     optional: true
 
@@ -1835,10 +1901,14 @@ snapshots:
       is-inside-container: 1.0.0
       wsl-utils: 0.1.0
 
-  openai@6.17.0(ws@8.19.0)(zod@4.3.6):
+  openai@6.22.0(ws@8.19.0)(zod@4.3.6):
     optionalDependencies:
       ws: 8.19.0
       zod: 4.3.6
+
+  p-retry@7.1.1:
+    dependencies:
+      is-network-error: 1.3.0
 
   package-json-from-dist@1.0.1: {}
 
@@ -1870,6 +1940,12 @@ snapshots:
 
   pend@1.2.0: {}
 
+  piemachine@0.0.8:
+    dependencies:
+      nanoid: 5.1.6
+      statelog-client: 0.0.35
+      termcolors: https://codeload.github.com/egonSchiele/termcolors/tar.gz/d5c1f497618398ce1440d2383d2aad2642e4051f
+
   prebuild-install@7.1.3:
     dependencies:
       detect-libc: 2.1.2
@@ -1885,6 +1961,11 @@ snapshots:
       tar-fs: 2.1.4
       tunnel-agent: 0.6.0
     optional: true
+
+  prompts@2.4.2:
+    dependencies:
+      kleur: 3.0.3
+      sisteransi: 1.0.5
 
   protobufjs@7.5.4:
     dependencies:
@@ -1992,12 +2073,14 @@ snapshots:
       simple-concat: 1.0.1
     optional: true
 
-  smoltalk@0.0.11(ws@8.19.0)(zod@4.3.6):
+  sisteransi@1.0.5: {}
+
+  smoltalk@0.0.18(ws@8.19.0)(zod@4.3.6):
     dependencies:
-      '@google/genai': 1.39.0
+      '@google/genai': 1.41.0
       egonlog: 0.0.2
       ollama: 0.6.3
-      openai: 6.17.0(ws@8.19.0)(zod@4.3.6)
+      openai: 6.22.0(ws@8.19.0)(zod@4.3.6)
     transitivePeerDependencies:
       - '@modelcontextprotocol/sdk'
       - bufferutil
@@ -2005,6 +2088,14 @@ snapshots:
       - utf-8-validate
       - ws
       - zod
+
+  statelog-client@0.0.35:
+    dependencies:
+      nanoid: 5.1.6
+
+  statelog-client@0.0.36:
+    dependencies:
+      nanoid: 5.1.6
 
   string-width@4.2.3:
     dependencies:
@@ -2057,7 +2148,7 @@ snapshots:
 
   tarsec@0.0.18: {}
 
-  tarsec@0.1.1: {}
+  tarsec@0.1.5: {}
 
   termcolors@https://codeload.github.com/egonSchiele/termcolors/tar.gz/d5c1f497618398ce1440d2383d2aad2642e4051f: {}
 
@@ -2082,7 +2173,7 @@ snapshots:
 
   typestache@0.4.4:
     dependencies:
-      '@types/node': 22.19.7
+      '@types/node': 22.19.11
       commander: 14.0.3
       tarsec: 0.0.18
       typescript: 5.9.3
