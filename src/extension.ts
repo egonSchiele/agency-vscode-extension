@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import { AgencyFormattingProvider } from "./formatter";
 import { activateDiagnostics } from "./diagnostics";
+import { activateCompletions } from "./completions";
 
 export function activate(context: vscode.ExtensionContext) {
   console.log("Agency extension is now active");
@@ -14,6 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(formatterProvider);
 
   activateDiagnostics(context);
+  activateCompletions(context);
 }
 
 export function deactivate() {}
