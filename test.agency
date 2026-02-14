@@ -1,31 +1,31 @@
-import node;
+import node { fetch } from "node-fetch"
+
 msg = input("> ")
 
-category :: "import_recipe" | "create_ingredient"
-category = llm("determine if the user wants to import a recipe from a website or create a new ingredient based on this message: ${msg}")
+type Category = "import_recipe" | "create_ingredient"
 
 type Url = {
   url: string # website url
 }
 
+node node main() {
+  msg = input("> ")
+  category: Category = llm("determine if the user wants to import a recipe from a website or create a new ingredient based on this message: ${msg}")
+
+  match(category) {
+    "import_recipe" => return importRecipe()
+    "create_ingredient" => return createIngredient()
+  }
+}
+
 def importRecipe() {
-  url :: Url
-  url = llm("extract the url from this message: ${msg}")
-
-  html :: string
-  html = fetch(url.url)
-
-  recipe :: string
-  recipe = llm("extract the recipe from this html: ${html}")
+  url: Url = llm("extract the url from this message: ${msg}")
+  html: string = fetch(url.url)
+  recipe: string = llm("extract the recipe from this html: ${html}")
 
   print(recipe)
 }
 
 def createIngredient() {
   print("tbd")
-}
-
-match(category) {
-  "import_recipe" => importRecipe()
-  "create_ingredient" => createIngredient()
 }
