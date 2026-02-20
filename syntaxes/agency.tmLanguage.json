@@ -37,6 +37,11 @@
     "comments": {
       "patterns": [
         {
+          "name": "comment.block.agency",
+          "begin": "/\\*",
+          "end": "\\*/"
+        },
+        {
           "name": "comment.line.double-slash.agency",
           "match": "//.*$"
         }
