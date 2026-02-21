@@ -30,6 +30,9 @@
       "include": "#member-access"
     },
     {
+      "include": "#type-annotation"
+    },
+    {
       "include": "#variables"
     }
   ],
@@ -51,7 +54,7 @@
       "patterns": [
         {
           "name": "keyword.control.agency",
-          "match": "\\b(if|while|for|match|return|async|await|stream|streaming|throws|try|catch|else|uses|import|from|tool)\\b"
+          "match": "\\b(if|while|for|match|return|async|await|stream|streaming|throws|try|catch|else|uses|import|from|tool|skill|thread|subthread|parallel)\\b"
         },
         {
           "name": "storage.type.agency",
@@ -170,6 +173,9 @@
           "include": "#keywords"
         },
         {
+          "include": "#type-annotation"
+        },
+        {
           "include": "#variables"
         }
       ]
@@ -273,6 +279,17 @@
         },
         "3": {
           "name": "variable.other.property.agency"
+        }
+      }
+    },
+    "type-annotation": {
+      "match": "(:)\\s*([A-Z][a-zA-Z0-9_]*)",
+      "captures": {
+        "1": {
+          "name": "punctuation.separator.colon.agency"
+        },
+        "2": {
+          "name": "entity.name.type.agency"
         }
       }
     },
