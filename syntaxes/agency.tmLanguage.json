@@ -54,7 +54,7 @@
       "patterns": [
         {
           "name": "keyword.control.agency",
-          "match": "\\b(if|while|for|match|return|async|await|stream|streaming|throws|try|catch|else|uses|import|from|tool|skill|thread|subthread|parallel)\\b"
+          "match": "\\b(if|while|for|match|return|async|await|stream|streaming|throws|try|catch|else|uses|import|from|tool|skill|thread|subthread|parallel|safe|shared)\\b"
         },
         {
           "name": "storage.type.agency",
