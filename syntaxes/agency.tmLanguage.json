@@ -54,7 +54,7 @@
       "patterns": [
         {
           "name": "keyword.control.agency",
-          "match": "\\b(if|while|for|match|return|async|await|stream|streaming|throws|try|catch|else|uses|import|from|tool|skill|thread|subthread|parallel|safe|shared)\\b"
+          "match": "\\b(if|while|for|match|return|async|await|stream|streaming|throws|try|catch|else|uses|import|from|tool|skill|thread|subthread|safe|shared|handle|with)\\b"
         },
         {
           "name": "storage.type.agency",
@@ -62,7 +62,7 @@
         },
         {
           "name": "support.function.builtin.agency",
-          "match": "\\b(input|read|write|fetch|fetchJSON|fetchJson|print|llm|interrupt|time|printTime)\\b"
+          "match": "\\b(input|read|write|fetch|fetchJSON|fetchJson|print|llm|interrupt|approve|reject)\\b"
         },
         {
           "name": "support.type.builtin.agency",
