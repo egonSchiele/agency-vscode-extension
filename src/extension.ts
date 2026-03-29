@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 import { AgencyFormattingProvider } from "./formatter";
 import { activateDiagnostics } from "./diagnostics";
 import { activateCompletions } from "./completions";
+import { AgencyDefinitionProvider } from "./definition";
 
 export function activate(context: vscode.ExtensionContext) {
   console.log("Agency extension is now active");
@@ -13,6 +14,12 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(formatterProvider);
+
+  const definitionProvider = vscode.languages.registerDefinitionProvider(
+    { scheme: "file", language: "agency" },
+    new AgencyDefinitionProvider()
+  );
+  context.subscriptions.push(definitionProvider);
 
   activateDiagnostics(context);
   activateCompletions(context);
