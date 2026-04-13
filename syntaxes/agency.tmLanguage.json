@@ -18,6 +18,9 @@
       "include": "#strings"
     },
     {
+      "include": "#annotations"
+    },
+    {
       "include": "#keywords"
     },
     {
@@ -47,6 +50,48 @@
         {
           "name": "comment.line.double-slash.agency",
           "match": "//.*$"
+        }
+      ]
+    },
+    "annotations": {
+      "patterns": [
+        {
+          "name": "meta.annotation.agency",
+          "begin": "(@)([a-zA-Z_][a-zA-Z0-9_]*)(\\()",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.annotation.agency"
+            },
+            "2": {
+              "name": "entity.name.function.annotation.agency"
+            },
+            "3": {
+              "name": "punctuation.definition.parameters.begin.agency"
+            }
+          },
+          "end": "\\)",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.parameters.end.agency"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#expression"
+            }
+          ]
+        },
+        {
+          "name": "meta.annotation.agency",
+          "match": "(@)([a-zA-Z_][a-zA-Z0-9_]*)",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.annotation.agency"
+            },
+            "2": {
+              "name": "entity.name.function.annotation.agency"
+            }
+          }
         }
       ]
     },
