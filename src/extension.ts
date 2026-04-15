@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import { AgencyFormattingProvider } from "./formatter";
 import { activateDiagnostics } from "./diagnostics";
-import { activateCompletions } from "./completions";
+
 import { AgencyDefinitionProvider } from "./definition";
 
 export function activate(context: vscode.ExtensionContext) {
@@ -22,7 +22,29 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(definitionProvider);
 
   activateDiagnostics(context);
-  activateCompletions(context);
+
+  // Format on save when the setting is enabled
+  const formatter = new AgencyFormattingProvider();
+  context.subscriptions.push(
+    vscode.workspace.onWillSaveTextDocument((event) => {
+      if (event.document.languageId !== "agency") {
+        return;
+      }
+      const config = vscode.workspace.getConfiguration("agency");
+      if (!config.get<boolean>("formatOnSave", false)) {
+        return;
+      }
+      event.waitUntil(
+        Promise.resolve(
+          formatter.provideDocumentFormattingEdits(
+            event.document,
+            { tabSize: 2, insertSpaces: true },
+            new vscode.CancellationTokenSource().token
+          )
+        )
+      );
+    })
+  );
 }
 
 export function deactivate() {}

@@ -29,6 +29,16 @@
         "configuration": "./language-configuration.json"
       }
     ],
+    "configuration": {
+      "title": "Agency",
+      "properties": {
+        "agency.formatOnSave": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically format Agency files on save."
+        }
+      }
+    },
     "grammars": [
       {
         "language": "agency",
