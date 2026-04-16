@@ -24,6 +24,9 @@
       "include": "#keywords"
     },
     {
+      "include": "#numbers"
+    },
+    {
       "include": "#operators"
     },
     {
@@ -112,6 +115,38 @@
         {
           "name": "support.type.builtin.agency",
           "match": "\\b(string|number|boolean|null|undefined|void|any)\\b"
+        },
+        {
+          "name": "keyword.operator.expression.agency",
+          "match": "\\b(typeof|instanceof|in|new|delete|void)\\b"
+        },
+        {
+          "name": "constant.language.agency",
+          "match": "\\b(true|false|null|undefined)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.hex.agency",
+          "match": "\\b0[xX][0-9a-fA-F]+\\b"
+        },
+        {
+          "name": "constant.numeric.octal.agency",
+          "match": "\\b0[oO][0-7]+\\b"
+        },
+        {
+          "name": "constant.numeric.binary.agency",
+          "match": "\\b0[bB][01]+\\b"
+        },
+        {
+          "name": "constant.numeric.decimal.agency",
+          "match": "\\b[0-9]+\\.?[0-9]*([eE][+-]?[0-9]+)?\\b"
+        },
+        {
+          "name": "constant.numeric.decimal.agency",
+          "match": "\\.[0-9]+([eE][+-]?[0-9]+)?\\b"
         }
       ]
     },
@@ -126,16 +161,88 @@
           "match": "=>"
         },
         {
+          "name": "keyword.operator.pipe.agency",
+          "match": "\\|>"
+        },
+        {
+          "name": "keyword.operator.spread.agency",
+          "match": "\\.\\.\\."
+        },
+        {
+          "name": "keyword.operator.optional-chaining.agency",
+          "match": "\\?\\."
+        },
+        {
+          "name": "keyword.operator.comparison.agency",
+          "match": "===|!=="
+        },
+        {
+          "name": "keyword.operator.comparison.agency",
+          "match": "==|!="
+        },
+        {
+          "name": "keyword.operator.assignment.compound.agency",
+          "match": ">>>=|<<=|>>=|\\*\\*=|&&=|\\|\\|=|\\?\\?="
+        },
+        {
+          "name": "keyword.operator.assignment.compound.agency",
+          "match": "\\+=|-=|\\*=|/=|%=|&=|\\|=|\\^="
+        },
+        {
+          "name": "keyword.operator.bitwise.shift.agency",
+          "match": ">>>|<<|>>"
+        },
+        {
+          "name": "keyword.operator.comparison.agency",
+          "match": "<=|>="
+        },
+        {
+          "name": "keyword.operator.comparison.agency",
+          "match": "<|>"
+        },
+        {
+          "name": "keyword.operator.arithmetic.agency",
+          "match": "\\*\\*"
+        },
+        {
+          "name": "keyword.operator.increment-decrement.agency",
+          "match": "\\+\\+|--"
+        },
+        {
+          "name": "keyword.operator.logical.agency",
+          "match": "&&|\\|\\|"
+        },
+        {
+          "name": "keyword.operator.nullish-coalescing.agency",
+          "match": "\\?\\?"
+        },
+        {
+          "name": "keyword.operator.logical.agency",
+          "match": "!"
+        },
+        {
+          "name": "keyword.operator.bitwise.agency",
+          "match": "~"
+        },
+        {
           "name": "keyword.operator.type.union.agency",
           "match": "\\|"
+        },
+        {
+          "name": "keyword.operator.bitwise.agency",
+          "match": "&|\\^"
+        },
+        {
+          "name": "keyword.operator.arithmetic.agency",
+          "match": "\\+|-|\\*|/|%"
         },
         {
           "name": "keyword.operator.assignment.agency",
           "match": "="
         },
         {
-          "name": "keyword.operator.pipe.agency",
-          "match": "\\|>"
+          "name": "keyword.operator.ternary.agency",
+          "match": "\\?"
         }
       ]
     },
@@ -216,10 +323,13 @@
           "include": "#member-access"
         },
         {
-          "include": "#operators"
+          "include": "#keywords"
         },
         {
-          "include": "#keywords"
+          "include": "#numbers"
+        },
+        {
+          "include": "#operators"
         },
         {
           "include": "#type-annotation"
