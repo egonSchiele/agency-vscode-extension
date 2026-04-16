@@ -1,6 +1,8 @@
 import * as vscode from "vscode";
 import { execSync } from "child_process";
 
+const output = vscode.window.createOutputChannel("Agency");
+
 export class AgencyFormattingProvider
   implements vscode.DocumentFormattingEditProvider
 {
@@ -12,7 +14,10 @@ export class AgencyFormattingProvider
     const text = document.getText();
     const formattedText = this.format(text);
 
-    // Replace entire document with formatted text
+    if (formattedText === text) {
+      return [];
+    }
+
     const fullRange = new vscode.Range(
       document.positionAt(0),
       document.positionAt(text.length)
@@ -22,26 +27,28 @@ export class AgencyFormattingProvider
   }
 
   private format(text: string): string {
-    try {
-      // Execute `pnpm run agency fmt` with the document content as stdin
-      // stdio: ['pipe', 'pipe', 'ignore'] = stdin, stdout, stderr (ignore stderr to suppress pnpm messages)
-      const formattedText = execSync("pnpm run agency fmt", {
-        input: text,
-        encoding: "utf-8",
-        cwd: vscode.workspace.workspaceFolders?.[0]?.uri.fsPath,
-        maxBuffer: 10 * 1024 * 1024, // 10 MB buffer
-        stdio: ["pipe", "pipe", "ignore"],
-      });
+    for (const runner of ["pnpm", "npm"]) {
+      try {
+        const formattedText = execSync(`${runner} run agency fmt`, {
+          input: text,
+          encoding: "utf-8",
+          cwd: vscode.workspace.workspaceFolders?.[0]?.uri.fsPath,
+          maxBuffer: 10 * 1024 * 1024,
+          stdio: ["pipe", "pipe", "ignore"],
+        });
 
-      const removePnpmHeader = formattedText.split("\n").slice(3).join("\n");
-      return removePnpmHeader.trim();
-    } catch (error: any) {
-      // If the command fails, show error and return original text
-      console.error("Agency formatting error:", error);
-      vscode.window.showErrorMessage(
-        `Agency formatter error: ${error.message}`
-      );
-      return text;
+        // Both pnpm and npm prefix stdout with ~3 header lines before the script output
+        return formattedText.split("\n").slice(3).join("\n").trim();
+      } catch (error: any) {
+        output.appendLine(
+          `Agency formatter: \`${runner} run agency fmt\` failed: ${error?.message ?? error}`
+        );
+      }
     }
+
+    output.appendLine(
+      "Agency formatter: no working runner found (tried pnpm, npm); leaving document unchanged."
+    );
+    return text;
   }
 }
