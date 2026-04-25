@@ -102,7 +102,7 @@
       "patterns": [
         {
           "name": "keyword.control.agency",
-          "match": "\\b(if|while|for|match|return|async|await|stream|streaming|throws|try|catch|else|uses|import|from|tool|skill|thread|subthread|safe|shared|handle|with|export|let|const|class|constructor|this|super)\\b"
+          "match": "\\b(if|while|for|match|return|async|await|stream|streaming|throws|try|catch|else|uses|import|from|tool|thread|subthread|safe|shared|handle|with|export|let|const|class|constructor|this|super)\\b"
         },
         {
           "name": "storage.type.agency",
