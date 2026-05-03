@@ -13,7 +13,7 @@
   ],
   "main": "./out/extension.js",
   "activationEvents": [
-    "onStartupFinished"
+    "onLanguage:agency"
   ],
   "contributes": {
     "languages": [
@@ -32,6 +32,11 @@
     "configuration": {
       "title": "Agency",
       "properties": {
+        "agency.lsp.command": {
+          "type": "string",
+          "default": "pnpm run --silent agency",
+          "description": "Command to run the Agency CLI. Examples: 'agency', '/usr/local/bin/agency', 'pnpm run --silent agency', 'npx agency'. The 'lsp' argument is appended automatically."
+        },
         "agency.formatOnSave": {
           "type": "boolean",
           "default": false,
@@ -61,6 +66,7 @@
     "typescript": "^5.3.0"
   },
   "dependencies": {
-    "agency-lang": "^0.0.86"
+    "agency-lang": "^0.0.107",
+    "vscode-languageclient": "^9.0.1"
   }
 }
