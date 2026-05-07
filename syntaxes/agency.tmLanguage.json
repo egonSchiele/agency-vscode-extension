@@ -24,6 +24,9 @@
       "include": "#keywords"
     },
     {
+      "include": "#unit-literals"
+    },
+    {
       "include": "#numbers"
     },
     {
@@ -126,6 +129,36 @@
         {
           "name": "constant.language.agency",
           "match": "\\b(true|false|null|undefined)\\b"
+        }
+      ]
+    },
+    "unit-literals": {
+      "patterns": [
+        {
+          "comment": "Cost literal: $5, $5.00, $0.50",
+          "name": "constant.numeric.unit.cost.agency",
+          "match": "(\\$)(\\d+\\.?\\d*)",
+          "captures": {
+            "1": {
+              "name": "keyword.other.unit.agency"
+            },
+            "2": {
+              "name": "constant.numeric.agency"
+            }
+          }
+        },
+        {
+          "comment": "Time literal: 30s, 500ms, 2h, 1m, 3d, 1w",
+          "name": "constant.numeric.unit.time.agency",
+          "match": "(\\d+\\.?\\d*)(ms|[smhdw])\\b",
+          "captures": {
+            "1": {
+              "name": "constant.numeric.agency"
+            },
+            "2": {
+              "name": "keyword.other.unit.agency"
+            }
+          }
         }
       ]
     },
@@ -330,6 +363,9 @@
         },
         {
           "include": "#keywords"
+        },
+        {
+          "include": "#unit-literals"
         },
         {
           "include": "#numbers"
