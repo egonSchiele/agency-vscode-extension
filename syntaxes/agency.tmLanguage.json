@@ -15,6 +15,9 @@
       "include": "#backtick-strings"
     },
     {
+      "include": "#triple-strings"
+    },
+    {
       "include": "#strings"
     },
     {
@@ -108,7 +111,7 @@
       "patterns": [
         {
           "name": "keyword.control.agency",
-          "match": "\\b(if|while|for|match|return|async|await|throws|try|catch|else|uses|import|from|tool|thread|subthread|safe|shared|handle|with|export|let|const|class|constructor|this|super|parallel|seq)\\b"
+          "match": "\\b(if|while|for|match|return|async|await|throws|try|catch|else|uses|import|from|tool|thread|subthread|safe|shared|handle|with|export|let|const|class|constructor|this|super|parallel|seq|is)\\b"
         },
         {
           "name": "storage.type.agency",
@@ -116,7 +119,7 @@
         },
         {
           "name": "support.function.builtin.agency",
-          "match": "\\b(input|read|write|fetch|fetchJSON|fetchJson|print|llm|interrupt|approve|reject|fork)\\b"
+          "match": "\\b(input|read|write|fetch|fetchJSON|fetchJson|print|llm|interrupt|approve|reject|fork|propagate)\\b"
         },
         {
           "name": "support.type.builtin.agency",
@@ -282,6 +285,37 @@
         }
       ]
     },
+    "triple-strings": {
+      "name": "string.quoted.triple.agency",
+      "begin": "\"\"\"",
+      "end": "\"\"\"",
+      "patterns": [
+        {
+          "name": "meta.template.expression.agency",
+          "begin": "\\$\\{",
+          "end": "\\}",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.template-expression.begin.agency"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.template-expression.end.agency"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#expression"
+            }
+          ]
+        },
+        {
+          "name": "constant.character.escape.agency",
+          "match": "\\\\."
+        }
+      ]
+    },
     "strings": {
       "name": "string.quoted.double.agency",
       "begin": "\"",
@@ -346,6 +380,9 @@
     },
     "expression": {
       "patterns": [
+        {
+          "include": "#triple-strings"
+        },
         {
           "include": "#strings"
         },
