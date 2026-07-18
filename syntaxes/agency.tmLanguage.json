@@ -39,6 +39,9 @@
       "include": "#inline-block"
     },
     {
+      "include": "#builtin-member"
+    },
+    {
       "include": "#function-call"
     },
     {
@@ -111,15 +114,25 @@
       "patterns": [
         {
           "name": "keyword.control.agency",
-          "match": "\\b(if|while|for|match|return|async|await|throws|try|catch|else|uses|import|from|tool|thread|subthread|safe|shared|handle|with|export|let|const|class|constructor|this|super|parallel|seq|is|guard|finalize)\\b"
+          "match": "\\b(if|while|for|match|return|async|await|throws|try|catch|then|else|uses|import|from|tool|thread|subthread|safe|shared|handle|with|export|let|const|class|constructor|this|super|parallel|seq|is|guard|finalize)\\b"
         },
         {
           "name": "storage.type.agency",
           "match": "\\b(def|type|node)\\b"
         },
         {
+          "comment": "Language built-ins (guide/builtins.html)",
           "name": "support.function.builtin.agency",
-          "match": "\\b(input|read|write|fetch|fetchJSON|fetchJson|print|llm|interrupt|approve|reject|fork|propagate)\\b"
+          "match": "\\b(llm|checkpoint|getCheckpoint|restore|interrupt|approve|reject|propagate|fork|race|callback|success|failure|isSuccess|isFailure|schema|debugger|registerTools)\\b"
+        },
+        {
+          "comment": "Auto-imported stdlib index module",
+          "name": "support.function.builtin.agency",
+          "match": "\\b(printJSON|print|setAgentCwd|getAgentCwd|applyAgentCwd|input|sleep|saveDraft|readBinary|read|writeBinary|write|range|map|filter|exclude|findIndex|find|reduce|flatMap|every|some|count|sortBy|unique|groupBy)\\b"
+        },
+        {
+          "name": "support.function.builtin.agency",
+          "match": "\\b(fetchJSON|fetchJson|fetch|pass)\\b"
         },
         {
           "name": "support.type.builtin.agency",
@@ -393,6 +406,9 @@
           "include": "#inline-block"
         },
         {
+          "include": "#builtin-member"
+        },
+        {
           "include": "#function-call"
         },
         {
@@ -544,6 +560,19 @@
           }
         }
       ]
+    },
+    "builtin-member": {
+      "comment": "Built-in schema methods: .partial, .describe, .rename, .preapprove",
+      "name": "meta.member.access.builtin.agency",
+      "match": "(\\.)(partial|describe|rename|preapprove)\\b",
+      "captures": {
+        "1": {
+          "name": "punctuation.accessor.agency"
+        },
+        "2": {
+          "name": "support.function.builtin.agency"
+        }
+      }
     },
     "function-call": {
       "name": "meta.function-call.agency",
