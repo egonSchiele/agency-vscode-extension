@@ -123,7 +123,7 @@
         {
           "comment": "Language built-ins (guide/builtins.html)",
           "name": "support.function.builtin.agency",
-          "match": "\\b(llm|checkpoint|getCheckpoint|restore|interrupt|approve|reject|propagate|fork|race|callback|success|failure|isSuccess|isFailure|schema|debugger|registerTools)\\b"
+          "match": "\\b(llm|checkpoint|getCheckpoint|restore|interrupt|approve|reject|propagate|fork|race|forkShared|raceShared|callback|success|failure|isSuccess|isFailure|schema|debugger|registerTools)\\b"
         },
         {
           "comment": "Auto-imported stdlib index module",
