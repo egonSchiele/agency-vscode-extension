@@ -6,6 +6,9 @@
       "include": "#comments"
     },
     {
+      "include": "#template-holes"
+    },
+    {
       "include": "#function-definition"
     },
     {
@@ -55,6 +58,53 @@
     }
   ],
   "repository": {
+    "template-holes": {
+      "comment": "Template holes (guide/templates.html): #-prefixed placeholders. Ordered longest-first so #...name and #\"name\" win before bare #name. Must be included ahead of operators/strings/variables so the # marker is not split off.",
+      "patterns": [
+        {
+          "comment": "Splice hole: #...name (sequence placeholder)",
+          "name": "meta.template.hole.splice.agency",
+          "match": "(#)(\\.\\.\\.)([a-zA-Z_][a-zA-Z0-9_]*)",
+          "captures": {
+            "1": {
+              "name": "keyword.other.template.hole.agency"
+            },
+            "2": {
+              "name": "keyword.operator.spread.agency"
+            },
+            "3": {
+              "name": "variable.other.template.hole.agency"
+            }
+          }
+        },
+        {
+          "comment": "Quoted-name hole: #\"field-name\"",
+          "name": "meta.template.hole.quoted.agency",
+          "match": "(#)(\"[^\"]*\")",
+          "captures": {
+            "1": {
+              "name": "keyword.other.template.hole.agency"
+            },
+            "2": {
+              "name": "variable.other.template.hole.agency"
+            }
+          }
+        },
+        {
+          "comment": "Expression/statement/identifier hole: #name",
+          "name": "meta.template.hole.agency",
+          "match": "(#)([a-zA-Z_][a-zA-Z0-9_]*)",
+          "captures": {
+            "1": {
+              "name": "keyword.other.template.hole.agency"
+            },
+            "2": {
+              "name": "variable.other.template.hole.agency"
+            }
+          }
+        }
+      ]
+    },
     "comments": {
       "patterns": [
         {
@@ -394,6 +444,9 @@
     "expression": {
       "patterns": [
         {
+          "include": "#template-holes"
+        },
+        {
           "include": "#triple-strings"
         },
         {
@@ -487,8 +540,7 @@
           "end": "\\}",
           "patterns": [
             {
-              "name": "comment.line.hash.agency",
-              "match": "#.*$"
+              "include": "#template-holes"
             },
             {
               "name": "meta.field.agency",
